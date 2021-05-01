@@ -1,6 +1,13 @@
 # OSX
-#
+# Go out imperialist symbol
 .DS_Store
+
+# .vscode
+.vscode/
+
+# .expo
+.expo/
+
 
 # Xcode
 #
