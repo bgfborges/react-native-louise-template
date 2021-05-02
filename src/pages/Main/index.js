@@ -1,31 +1,33 @@
 import React from 'react';
-import { ImageBackground, StyleSheet, Text } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons'; 
+import Header from '../../components/Header';
+import { Container, Content, Card, CardHeader, CardContent, CardFooter, Annotation, Title, Description } from './styles';
+import Tabs from '../../components/Tabs';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-    color: '#fff',
-  },
-});
+export default function Main(){
+  return(
+    <>
+      <Container barStyle="light-content" backgroundColor="#8B10AE">
+        <Header />
+        
+        <Content>
+          <Card>
+            <CardHeader>
+              <Icon name="attach-money" size={28} color="#666" />
+              <Icon name="visibility-off" size={28} color="#666" />
+            </CardHeader>
+            <CardContent>
+              <Title>Comissões Disponíveis</Title>
+              <Description>R$48.569,00</Description>
+            </CardContent>
+            <CardFooter>
+              <Annotation>Pagamento de R$957,00 recebido de Kaoma Razia hoje as 17h.</Annotation>
+            </CardFooter >
+          </Card>
+        </Content>
 
-const Main = () => (
-  <ImageBackground
-    style={styles.container}
-    resizeMode="cover"
-    source={{
-      url: 'https://s3-sa-east-1.amazonaws.com/rocketseat-cdn/background.png',
-    }}
-  >
-    <Text style={styles.welcome}>Hello! I´m Louise :)</Text>
-  </ImageBackground>
-);
-
-export default Main;
+        <Tabs />
+      </Container>
+    </>
+  );
+}
