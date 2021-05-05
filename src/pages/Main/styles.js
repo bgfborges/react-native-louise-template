@@ -1,12 +1,22 @@
 import styled from 'styled-components/native';
-
+import { Animated } from 'react-native';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
+
 
 export const Container = styled.View`
   flex: 1;
-  background: #8B10AE;
   padding-bottom: ${getStatusBarHeight()}px;
-  justify-content: center; 
+  justify-content: center;
+`;
+
+export const SafeAreaView = styled.SafeAreaView`
+  flex: 1;
+`;
+
+export const ImageBackground = styled.ImageBackground`
+  flex: 1;
+  resize-mode: cover;
+  justify-content: center;
 `;
 
 export const Content = styled.View`
@@ -15,7 +25,7 @@ export const Content = styled.View`
   z-index: 5;
 `;
 
-export const Card = styled.View`
+export const Card = styled(Animated.View)`
   flex: 1;
   background: #fff;
   border-radius: 4px;
@@ -23,8 +33,8 @@ export const Card = styled.View`
   height: 100%;
   position: absolute;
   left: 0;
-  top: 0;
   right: 0;
+  top: 0;
 `;
 
 export const CardHeader = styled.View`
@@ -42,18 +52,18 @@ export const CardContent = styled.View`
 
 export const Title = styled.Text`
   font-size: 13px;
-  color: #999;
+  color: #333;
 `;
 
 export const Description = styled.Text`
   font-size: 32px;
   margin-top: 3px;
-  color: #333;
+  color: #0A0A0A;
 `;
 
 export const CardFooter = styled.View`
   padding: 30px;
-  background: #eee;
+  background: #FFFAFF;
   border-radius: 4px;
 `;
 
