@@ -27,7 +27,6 @@ export const Content = styled.View`
 
 export const Card = styled(Animated.View)`
   flex: 1;
-  background: #fff;
   border-radius: 4px;
   margin: 0 20px;
   height: 100%;
@@ -35,6 +34,10 @@ export const Card = styled(Animated.View)`
   left: 0;
   right: 0;
   top: 0;
+`;
+
+export const CardBackground = styled.ImageBackground`
+  flex: 1;
 `;
 
 export const CardHeader = styled.View`

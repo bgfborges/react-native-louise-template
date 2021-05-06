@@ -13,6 +13,8 @@ target 'louisenine' do
   )
 
 
+  pod 'react-native-blur', :path => '../node_modules/@react-native-community/blur'
+
   target 'louisenineTests' do
     inherit! :complete
     # Pods for testing
