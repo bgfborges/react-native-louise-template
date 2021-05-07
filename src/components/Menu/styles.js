@@ -21,7 +21,7 @@ export const Nav = styled.View`
 export const NavItem = styled.View`
   flex-direction: row;
   align-items: center;
-  padding: 12px 0;
+  padding: 10px;
   border-bottom-width: ${ StyleSheet.hairlineWidth }px;
   border-bottom-color: rgba(255, 255, 255, 0.8);
 `;

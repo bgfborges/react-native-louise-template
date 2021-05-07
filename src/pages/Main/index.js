@@ -1,7 +1,6 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { Animated } from 'react-native';
-import { BlurView } from '@react-native-community/blur';
 import { PanGestureHandler, State } from 'react-native-gesture-handler';
 import Header from '../../components/Header';
 import { Container, Content, Card, CardHeader, CardContent, CardFooter, Annotation, Title, Description, SafeAreaView, ImageBackground, CardBackground } from './styles';
@@ -79,17 +78,10 @@ export default function Main(){
                 }],
               }}
             >
-              <BlurView
-                blurType="light"
-                blurAmount={10}
-                style={{
-                  flex: 1
-                }}
-              >
                 <CardBackground>
                   <CardHeader>
-                    <Icon name="attach-money" size={28} color="#666" />
-                    <Icon name="visibility-off" size={28} color="#666" />
+                    <Icon name="attach-money" size={28} color="#f5f5f5" />
+                    <Icon name="visibility-off" size={28} color="#f5f5f5" />
                   </CardHeader>
                   <CardContent>
                     <Title>Comissões Disponíveis</Title>
@@ -99,7 +91,6 @@ export default function Main(){
                     <Annotation>Pagamento de R$957,00 recebido de Kaoma Razia hoje as 17h.</Annotation>
                   </CardFooter>
               </CardBackground>
-              </BlurView>
             </Card>
           </PanGestureHandler>
         </Content>

@@ -14,8 +14,8 @@ export default function Tabs({ translateY }){
           })
         }],
         opacity: translateY.interpolate({
-          inputRange: [0, 380],
-          outputRange: [1, 0.6],
+          inputRange: [0, 150],
+          outputRange: [1, 0.1],
           extrapolate: 'clamp'
         })
       }}>

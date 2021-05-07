@@ -7,6 +7,7 @@ export const Container = styled.View`
   flex: 1;
   padding-bottom: ${getStatusBarHeight()}px;
   justify-content: center;
+  background: #2D1E5CC0;
 `;
 
 export const SafeAreaView = styled.SafeAreaView`
@@ -38,6 +39,7 @@ export const Card = styled(Animated.View)`
 
 export const CardBackground = styled.ImageBackground`
   flex: 1;
+  background: #0A0A0AA0;
 `;
 
 export const CardHeader = styled.View`
@@ -54,14 +56,16 @@ export const CardContent = styled.View`
 `;
 
 export const Title = styled.Text`
-  font-size: 13px;
-  color: #333;
+  font-size: 15px;
+  color: #fff;
+  font-weight: bold;
 `;
 
 export const Description = styled.Text`
   font-size: 32px;
   margin-top: 3px;
-  color: #0A0A0A;
+  color: #fff;
+  font-weight: bold;
 `;
 
 export const CardFooter = styled.View`
