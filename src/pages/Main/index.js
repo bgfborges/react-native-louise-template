@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { Animated } from 'react-native';
 import { PanGestureHandler, State } from 'react-native-gesture-handler';
 import Header from '../../components/Header';
-import { Container, Content, Card, CardHeader, CardContent, CardFooter, Annotation, Title, Description, SafeAreaView, ImageBackground, CardBackground } from './styles';
+import { Container, Content, Card, CardHeader, CardContent, CardFooter, Annotation, Title, Description, SafeAreaView, ImageBackground } from './styles';
 import Tabs from '../../components/Tabs';
 import Menu from '../../components/Menu';
 import backmain from '../../assets/backmain.png';
+import { onOpen, AddClient, MyComissions } from '../../components/Modal';
 
 
 export default function Main(){
@@ -59,7 +60,6 @@ export default function Main(){
     source={backmain}
     >
       <Container barStyle="light-content">
-        <SafeAreaView>
         <Header />
         <Content>
           <Menu translateY={translateY} />
@@ -78,24 +78,21 @@ export default function Main(){
                 }],
               }}
             >
-                <CardBackground>
-                  <CardHeader>
-                    <Icon name="attach-money" size={28} color="#f5f5f5" />
-                    <Icon name="visibility-off" size={28} color="#f5f5f5" />
-                  </CardHeader>
-                  <CardContent>
-                    <Title>Comissões Disponíveis</Title>
-                    <Description>R$48.569,00</Description>
-                  </CardContent>
-                  <CardFooter>
-                    <Annotation>Pagamento de R$957,00 recebido de Kaoma Razia hoje as 17h.</Annotation>
-                  </CardFooter>
-              </CardBackground>
+              <CardHeader>
+                <Icon name="attach-money" size={28} color="#f5f5f5" />
+                <Icon name="visibility-off" size={28} color="#f5f5f5" />
+              </CardHeader>
+              <CardContent>
+                <Title>Comissões Disponíveis</Title>
+                <Description>R$48.569,00</Description>
+              </CardContent>
+              <CardFooter>
+                <Annotation>Pagamento de R$957,00 recebido de Kaoma Razia hoje as 17h.</Annotation>
+              </CardFooter>
             </Card>
           </PanGestureHandler>
         </Content>
         <Tabs translateY={translateY} />
-        </SafeAreaView>
       </Container>
     </ImageBackground>
   );

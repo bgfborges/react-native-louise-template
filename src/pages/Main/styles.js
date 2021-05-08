@@ -35,18 +35,15 @@ export const Card = styled(Animated.View)`
   left: 0;
   right: 0;
   top: 0;
-`;
-
-export const CardBackground = styled.ImageBackground`
-  flex: 1;
-  background: #0A0A0AA0;
+  z-index: 100;
+  background: #0A0A0AA9;
 `;
 
 export const CardHeader = styled.View`
   flex-direction: row;
   justify-content: space-between;
   padding: 30px;
-  align-items: center; 
+  align-items: center;
 `;
 
 export const CardContent = styled.View`

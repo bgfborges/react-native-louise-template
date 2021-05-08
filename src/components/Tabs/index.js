@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { SafeAreaView, Text } from 'react-native';
 import { Container, TabsContainer, TabItem, TabText } from './styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import { Modalize } from 'react-native-modalize';
 
 export default function Tabs({ translateY }){
+
+  const addclientcall = useRef(null);
+  const AddClientCall = () => {
+      addclientcall.current?.open();
+  };
+  
+  const mycomissionscall = useRef(null);
+  const MyComissionsCall = () => {
+    mycomissionscall.current?.open();
+  };
+
   return(
     <>
+    <SafeAreaView>
       <Container style={{
         transform: [{
           translateY: translateY.interpolate({
@@ -13,18 +27,13 @@ export default function Tabs({ translateY }){
             extrapolate: 'clamp'
           })
         }],
-        opacity: translateY.interpolate({
-          inputRange: [0, 150],
-          outputRange: [1, 0.1],
-          extrapolate: 'clamp'
-        })
       }}>
-        <TabsContainer>
-            <TabItem>
+          <TabsContainer>
+            <TabItem onPress={AddClientCall}>
                 <Icon name='person-add' size={24} color='#FFF'/>
                 <TabText>Adicionar Cliente</TabText>
             </TabItem>
-            <TabItem>
+            <TabItem onPress={MyComissionsCall}>
                 <Icon name='credit-card' size={24} color='#FFF'/>
                 <TabText>Minhas Comissões</TabText>
             </TabItem>
@@ -44,8 +53,13 @@ export default function Tabs({ translateY }){
                 <Icon name='help-outline' size={24} color='#FFF'/>
                 <TabText>Me Ajude</TabText>
             </TabItem>
-        </TabsContainer>
-      </Container>
+          </TabsContainer>
+        </Container>
+      </SafeAreaView>
+
+      <Modalize modalHeight={350} ref={addclientcall}><Text>Add Client</Text></Modalize>
+      <Modalize modalHeight={350} ref={mycomissionscall}><Text>My Comissions</Text></Modalize>
+
     </>
   );
 }

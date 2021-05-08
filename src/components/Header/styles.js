@@ -3,7 +3,7 @@ import styled from 'styled-components/native';
 export const Container = styled.View`
   align-items: center;
   padding: 40px 0 30px;
-  margin: 40px 0 0;
+  margin: 20px 0 0;
 `;
 
 export const Top = styled.View`
@@ -21,5 +21,5 @@ export const Title = styled.Text`
   font-size: 18px;
   color: #fff;
   font-weight: bold;
-  margin-left: 12px;
+  margin: 12px;
 `;
